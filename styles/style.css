@@ -53,6 +53,10 @@ main > section{
     margin-top: 130px;
 }
 
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
 
 /* Header styles */
 
@@ -120,36 +124,210 @@ main > section{
     max-width: 530px;
 }
 
-.feature-title{
-    font-size: 2.8rem;
-    font-weight: 700;
-}
-
 #quick-list{
     font-weight: 500;
 }
+
+
+/* Features Section Style */
+.features{
+    gap: 146px;
+    width: calc(100% - 146px)/2;
+}
+
+#feature-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.feature-card .feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#exp-badge{
+    padding: 45px 42px;
+    border-radius: 8px;
+    margin-left: -92px;
+    margin-top: -100px;
+}
+
+#exp-year{
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+#exp-text{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.featured-architect img{
+    width: 100%;
+}
+
+
+
+/* Fact Card */
+.fact{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.facts-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #727272;
+}
+
+.fact-desc{
+    max-width: 540px;
+}
+
+
+/* Sponsor Style */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sponsor-logos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-logos img{
+    filter: grayscale(100%);
+}
+
+
+/* Footer */
+.ending{
+    background-color: #FFF4E7;
+    font-size: 1.25rem;
+    border-radius: 8px;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    text-align: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 130px;
+    margin-bottom: 216px;
+}
+
+/* Effects on hover */
+.nav-link:hover{
+    text-decoration:underline solid #FF900E;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color:  #000000; 
+    color: #FF900E;
+    cursor: pointer;
+}
+
+.sponsor-logos img:hover{
+    filter: grayscale(0%);
+}
+
+.fact:hover {
+    background-color: #FF900E;
+    color: #FFFFFF;
+    transition: 0.3s ease-in-out;
+}
+.fact:hover .fact-name {
+    color: #FFFFFF;
+}
+
 
 /* Responsive */
 @media screen and (max-width: 576px) {
     .navbar, 
     .nav-links, 
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container,
+    .facts-container,
+    .sponsor-logos{
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
         margin-left: 20px;
     }
+
+    .facts-container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsor-logos{
+        justify-items: center;
+        gap: 50px;
+    }
+    #exp-badge{
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
 
 /* Medium Device */
 @media screen and (min-width: 576px) and (max-width: 992px){
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
     .our-features{
         margin: 50px auto;
     }
+    .facts-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        justify-items: center;
+    }
+
+    .sponsor-logos{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        row-gap: 50px;
+    }
+    #exp-badge{
+        margin-top: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
+
