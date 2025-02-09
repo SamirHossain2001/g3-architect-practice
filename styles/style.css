@@ -132,7 +132,10 @@ main > section{
 /* Features Section Style */
 .features{
     gap: 146px;
-    width: calc(100% - 146px)/2;
+}
+
+.features> div{
+    width: 50%;
 }
 
 #feature-section-title{
@@ -285,6 +288,9 @@ main > section{
     .our-features{
         margin-left: 20px;
     }
+    .features> div{
+        width: 100%;
+    }
 
     .facts-container{
         justify-items: center;
@@ -311,6 +317,9 @@ main > section{
     }
     .our-features{
         margin: 50px auto;
+    }
+    .features> div{
+        width: 100%;
     }
     .facts-container{
         grid-template-columns: repeat(2, 1fr);
